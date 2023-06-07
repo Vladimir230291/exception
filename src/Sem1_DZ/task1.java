@@ -2,9 +2,9 @@ package Sem1_DZ;
 
 public class task1 {
     public static void main(String[] args) {
-        int[] arr = new int[]{1,2,3,4,5};
+        int[] arr = new int[]{1, 2, 3, 4, 5};
         outOfArray(arr);
-        division(12,0);
+        division(12, 0);
         String[] arrStr = new String[]{"1", "два", null, "4", "пять"};
         checkNull(arrStr);
     }
@@ -21,21 +21,18 @@ public class task1 {
     //    выход за пределы массива
 
     public static void outOfArray(int[] arr) {
-        int impossible = 0;
         try {
-            impossible = arr[arr.length];
+            int impossible = arr[arr.length];
         } catch (Exception e) {
-            throw new ArrayIndexOutOfBoundsException("Недопустимый индекс");
+            throw new ArrayIndexOutOfBoundsException("Выход за пределы массива");
         }
-
     }
-
 
     //    Проверка на null
 
     public static void checkNull(String[] arrStr) {
-        for (int i = 0; i < arrStr.length; i++) {
-            if (arrStr[i] == null) {
+        for (String s : arrStr) {
+            if (s == null) {
                 throw new NullPointerException("В массиве есть null");
             }
         }
