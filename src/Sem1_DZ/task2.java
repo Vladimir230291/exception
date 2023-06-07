@@ -14,6 +14,7 @@ public class task2 {
         int sum = 0;
 //        Необходимо вставить проверки, перед началом операции.
         if (checkNull(arr) && checkNumber(arr) && checkColumns(arr)) {
+
             for (int i = 0; i < arr.length; i++) {
                 for (int j = 0; j < 5; j++) {
                     int val = Integer.parseInt(arr[i][j]);
