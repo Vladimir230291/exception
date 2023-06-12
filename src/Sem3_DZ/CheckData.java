@@ -1,14 +1,13 @@
 package Sem3_DZ;
 
-import java.util.Date;
 
 public class CheckData {
     // проверка корректности ввода ФИО
     public static String checkName(String name) throws Exception {
-        if (name.length() < 2) {
-            return "тут должно быть отработать исключение";
+        if (name == null) {
+            throw new Exception("Введите корректное ФИО");
         } else {
-            return name.strip();
+            return name;
         }
     }
 
@@ -25,6 +24,7 @@ public class CheckData {
 
 
     }
+//    проверка корректности ввода даты(числа)
     private static String checkDate(String birthDate) throws Exception {
         String[] date = birthDate.split("\\.");
         int[] dateInt = new int[3];
@@ -36,6 +36,25 @@ public class CheckData {
         }
         return birthDate;
     }
+//    проверка корректности ввода номера телефона
+    public static String checkPhoneNumber(String phoneNumber) throws Exception {
+        if (phoneNumber == null) {
+            throw new Exception("Введите номер телефона");
+        } else if (phoneNumber.length() != 11) {
+            throw new Exception("Номер телефона должен содержать 11 цифр");
+        }
+        return phoneNumber;
+    }
+//    проверка корректности ввода пола
+    public static String checkGender(String gender) throws Exception {
+        if (gender == null) {
+            throw new Exception("Введите пол");
+        } else if (!gender.equals("f") && !gender.equals("m")) {
+            throw new Exception("Пол должен содержать одну латинскую букву(f или m)");
+        }
+        return gender;
+    }
+
 }
 
 

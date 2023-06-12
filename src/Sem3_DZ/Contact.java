@@ -1,6 +1,6 @@
 package Sem3_DZ;
 
-import java.util.Date;
+
 
 public class Contact {
     String surname;
@@ -20,9 +20,12 @@ public class Contact {
         this.gender = gender;
     }
 
+    public String getSurname() {
+        return surname;
+    }
 
     @Override
     public String toString() {
-        return surname + " " + name + " " + secondName + " " + birthDate + " " + phoneNumber + " " + gender;
+        return surname + " " + name + " " + secondName + " " + birthDate + " " + phoneNumber + " " + gender + "\n";
     }
 }
