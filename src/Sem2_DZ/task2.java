@@ -10,7 +10,6 @@ public class task2 {
         } catch (ArithmeticException e) {
             System.out.println("Catching exception: " + e);
         }
-
     }
 
 }
